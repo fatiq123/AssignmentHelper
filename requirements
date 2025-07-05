@@ -1,0 +1,221 @@
+# Amazon Q Developer CLI Prompt for AssignmentHelper Website
+
+## Project Overview
+Create a modern, responsive React web application for "AssignmentHelper" - an academic assistance platform targeting international students primarily in Australia, with potential expansion to UK and other countries. The website should have a professional, attractive UI with linear gradients and modern design elements.
+
+## Project Structure & Technology Stack
+- **Framework**: React with JavaScript (ES6+)
+- **Styling**: Tailwind CSS with custom gradients and animations
+- **Routing**: React Router DOM
+- **Forms**: React Hook Form with validation
+- **Icons**: React Icons or Lucide React
+- **Email Service**: EmailJS for contact forms
+- **Animations**: Framer Motion for smooth animations
+- **Progress Indicators**: React Circular Progressbar
+- **Build Tool**: Vite
+- **Deployment**: Netlify or Vercel ready
+
+## Design Requirements
+- **Color Scheme & Gradients**: 
+  - Primary: Blue (#1e40af) with gradients to lighter shades
+  - Secondary: Orange (#f97316) with warm gradients
+  - Accent: Sky Blue (#0ea5e9) with vibrant transitions
+  - Dark: Gray (#1f2937) with subtle gradients
+  - Light: Slate (#f8fafc) with soft transitions
+  - Linear Gradients: Blue to purple, orange to pink, teal to blue
+- **Typography**: 
+  - Global font system with Inter or Poppins
+  - Gradient text effects on headings
+  - Consistent font weights (300, 400, 500, 600, 700)
+  - Proper text hierarchy and spacing
+- **Design Style**: Modern, clean, with extensive linear gradients and smooth animations
+- **Responsive**: Mobile-first approach with consistent breakpoints
+- **Theme**: Unified gradient theme throughout all pages with professional academic appeal
+- **Animation**: Smooth transitions, hover effects, and micro-interactions
+
+## Required Pages & Components
+
+### 1. Home Page (/)
+- Hero section with animated gradient background
+- Services overview cards with gradient borders and hover effects
+- **Assignment Progress Section**: Circular progress indicators showing completion stats
+  - Total assignments completed (5000+)
+  - Success rate (98%)
+  - Assignment types with individual progress bars
+  - Animated counters and progress rings
+- **Stunning Testimonials Section**: 
+  - Card-based layout with gradient backgrounds
+  - Star ratings with animations
+  - Client photos/avatars with gradient borders
+  - Sliding/carousel testimonial display
+  - Interactive rating displays
+- How it works (4-step process with gradient icons)
+- Quick contact form with gradient submit button
+- Fixed WhatsApp button (bottom-right) with gradient background
+
+### 2. Services Page (/services)
+**Coding & Development Services with Gradient Cards:**
+- Programming Languages: Java, C++, C#, JavaScript, Python (with animated progress indicators)
+- Frameworks: Spring Boot, .NET, .NET Core, React, Vue, Angular (gradient technology cards)
+- Databases: SQL Server, MySQL, PostgreSQL (with completion statistics)
+- Projects: Full Stack, Web Apps, Mobile Apps (Kotlin, Jetpack Compose, Java, XML, Flutter, React Native)
+- Data Science: AI/ML projects, Data Analysis (Python focus) with project completion rates
+- Cloud Services: Azure, AWS deployment, RESTful API backends
+- Display with gradient technology logos and animated statistics
+- Circular progress indicators for each service showing expertise level and completion rates
+
+### 3. PTE Tutoring Page (/pte-tutoring)
+- One-to-one consultation services
+- Physical tutoring options
+- PTE modules: Speaking, Writing, Reading, Listening
+- Success stories section (placeholder for student score reports)
+- Booking form for tutoring sessions
+- Pricing packages
+
+### 4. Colleges & Universities Page (/institutions)
+- Grid layout showcasing partner institutions
+- Logos from assets folder for Australian colleges/universities
+- Categories: Colleges, Universities, Technical Institutes
+- Search and filter functionality
+- Brief descriptions of each institution
+
+### 5. About Us Page (/about)
+- Company story and mission
+- Expert team section
+- Why choose us
+- Our process and methodology
+- Success metrics
+
+### 6. Contact Page (/contact)
+- Multiple contact methods (Email, WhatsApp, Phone)
+- Contact form with validation
+- Office locations (if applicable)
+- FAQ section
+- Live chat integration placeholder
+
+### 7. Get Quote Page (/get-quote)
+- Detailed quote request form
+- Service type selection
+- File upload capability
+- Deadline picker
+- Budget range selector
+- Instant quote calculator
+
+## Key Features & Functionality
+
+### Global Components
+- **Header/Navigation**: Sticky navigation with gradient background and mobile hamburger menu
+- **Footer**: Gradient footer with links, contact info, social media
+- **WhatsApp Widget**: Fixed bottom-right button with gradient background linking to WhatsApp
+- **Loading States**: Smooth page transitions with gradient loading animations
+- **Error Boundaries**: Proper error handling with gradient error messages
+- **Global Typography**: Consistent font system with gradient text effects on headings
+- **Gradient Buttons**: All call-to-action buttons with gradient backgrounds and hover effects
+
+### Forms & Validation
+- Contact forms with email integration
+- Quote request forms
+- PTE tutoring booking forms
+- Form validation with error messages
+- Success confirmation messages
+
+### Interactive Elements
+- Gradient hover effects on cards and buttons
+- Smooth scrolling navigation with gradient scroll indicators
+- Animated counters for statistics with circular progress bars
+- Gradient image galleries for testimonials
+- Responsive modals with gradient backgrounds
+- **Assignment Progress Animations**: 
+  - Circular progress rings with gradient colors
+  - Animated percentage counters
+  - Type-based progress indicators (coding, writing, research)
+  - Real-time progress animations on page load
+- **Testimonial Interactions**:
+  - Card flip animations on hover
+  - Gradient star rating displays
+  - Sliding testimonial carousel
+  - Interactive rating filters
+
+### Email Integration
+- Contact form submissions to admin email
+- Auto-response emails to users
+- Quote requests forwarded to business email
+- Newsletter signup functionality
+
+## Content Requirements
+
+### Sample Content to Include
+- **Services**: Detailed descriptions with progress indicators for each service type
+- **Assignment Statistics**: 
+  - Programming assignments: 2500+ completed (85% progress indicator)
+  - Data Science projects: 1200+ completed (92% success rate)
+  - Web development: 1800+ completed (96% client satisfaction)
+  - Mobile apps: 800+ completed (88% completion rate)
+- **Testimonials**: Student success stories with gradient card designs, ratings, and photos
+- **FAQ**: Common questions with gradient accordion designs
+- **Blog Section**: Tips for international students with gradient category tags
+
+### Assets Integration
+- College/university logos from assets folder
+- Technology stack icons and logos
+- Student success story placeholders
+- Service category illustrations
+
+## Technical Requirements
+- **Performance**: Optimized images, lazy loading, code splitting, gradient optimization
+- **SEO**: Meta tags, structured data, sitemap
+- **Accessibility**: ARIA labels, keyboard navigation, screen reader support, proper color contrast
+- **Analytics**: Google Analytics integration ready
+- **Security**: XSS protection, secure forms, input validation
+- **Custom CSS**: Tailwind CSS extended with custom gradient classes and animations
+- **Component Library**: Reusable gradient components (GradientCard, GradientButton, ProgressRing)
+- **Animation Library**: Framer Motion for smooth page transitions and micro-interactions
+
+## Development Instructions
+1. Set up React project with JavaScript and Tailwind CSS with custom gradient configurations
+2. Configure routing with React Router DOM and smooth page transitions
+3. Create reusable gradient components (GradientButton, GradientCard, ProgressRing, TestimonialCard)
+4. Implement responsive design with mobile-first approach and consistent gradient themes
+5. Add form validation, email service integration, and gradient form styling
+6. Create smooth animations, transitions, and progress indicators using Framer Motion
+7. Implement global typography system with gradient text effects
+8. Set up circular progress indicators with animated counters for assignment statistics
+9. Design stunning testimonial cards with gradient backgrounds and interactive elements
+10. Optimize for performance, SEO, and ensure gradient consistency across all pages
+11. Test across different devices and browsers for gradient rendering
+
+## Deployment Configuration
+- Configure for Netlify/Vercel deployment
+- Set up environment variables for email service
+- Configure redirects for SPA routing
+- Add contact form backend integration
+
+## Additional Notes
+- Ensure all external links (WhatsApp, social media) open in new tabs with gradient button styling
+- Implement proper loading states with gradient animations for all async operations
+- Add proper PropTypes for component validation
+- Include comprehensive error handling with gradient-styled error messages
+- Make the design pixel-perfect with consistent gradient themes throughout
+- **Typography Requirements**:
+  - Use Inter or Poppins as primary font family
+  - Implement gradient text effects on all major headings
+  - Maintain consistent font weights and spacing
+  - Use gradient text for call-to-action elements
+- **Progress Indicators Must Include**:
+  - Animated circular progress bars for assignment completion rates
+  - Real-time counter animations
+  - Color-coded progress rings (green for high completion, orange for medium, blue for ongoing)
+  - Tooltip information on hover
+- **Testimonial Design Requirements**:
+  - Gradient card backgrounds with subtle shadows
+  - Star ratings with gradient colors
+  - Client photos with gradient borders
+  - Smooth carousel/slider functionality
+  - Interactive rating filters
+- **Gradient Theme Consistency**:
+  - All buttons, cards, and interactive elements should use consistent gradient patterns
+  - Background gradients should be subtle but present throughout
+  - Text gradients for headings and important content
+  - Hover effects should enhance gradients, not replace them
+
+Create this project with clean, maintainable JavaScript code structure, stunning gradient designs, and comprehensive documentation for easy future updates and scaling to other countries.
