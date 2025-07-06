@@ -9,8 +9,8 @@ const ContactSection = () => {
       icon: <Mail size={32} />,
       title: "Email Us",
       description: "Get detailed responses within 2 hours",
-      link: "mailto:hello@assignmenthelper.com",
-      linkText: "hello@assignmenthelper.com"
+      link: "mailto:fatiqhussnain1@gmail.com",
+      linkText: "fatiqhussnain1@gmail.com"
     },
     {
       icon: <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-message-circle">
@@ -18,8 +18,8 @@ const ContactSection = () => {
       </svg>,
       title: "WhatsApp",
       description: "Instant messaging and file sharing",
-      link: "https://wa.me/15551234567",
-      linkText: "+1 (555) 123-4567"
+      link: "https://wa.me/+923229549909",
+      linkText: "+923229549909"
     },
     {
       icon: <MessageSquare size={32} />,

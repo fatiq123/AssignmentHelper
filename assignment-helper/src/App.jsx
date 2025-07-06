@@ -7,6 +7,8 @@ import HomePage from './pages/HomePage';
 import ServicesPage from './pages/ServicesPage';
 import PTETutoringPage from './pages/PTETutoringPage';
 import InstitutionsPage from './pages/InstitutionsPage';
+import CollegesPage from './pages/CollegesPage';
+import TechnologiesPage from './pages/TechnologiesPage';
 import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
 import GetQuotePage from './pages/GetQuotePage';
@@ -44,6 +46,8 @@ function App() {
             <Route path="/services" element={<ServicesPage />} />
             <Route path="/pte-tutoring" element={<PTETutoringPage />} />
             <Route path="/institutions" element={<InstitutionsPage />} />
+            <Route path="/colleges" element={<CollegesPage />} />
+            <Route path="/technologies" element={<TechnologiesPage />} />
             <Route path="/about" element={<AboutPage />} />
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/get-quote" element={<GetQuotePage />} />

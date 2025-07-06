@@ -52,6 +52,8 @@ const Header = () => {
               <NavLink to="/services" label="Services" />
               <NavLink to="/pte-tutoring" label="PTE Tutoring" />
               <NavLink to="/institutions" label="Institutions" />
+              <NavLink to="/colleges" label="Colleges" />
+              <NavLink to="/technologies" label="Technologies" />
               <NavLink to="/about" label="About" />
               <NavLink to="/contact" label="Contact" />
             </div>
@@ -88,6 +90,8 @@ const Header = () => {
           <MobileNavLink to="/services" label="Services" />
           <MobileNavLink to="/pte-tutoring" label="PTE Tutoring" />
           <MobileNavLink to="/institutions" label="Institutions" />
+          <MobileNavLink to="/colleges" label="Colleges" />
+          <MobileNavLink to="/technologies" label="Technologies" />
           <MobileNavLink to="/about" label="About" />
           <MobileNavLink to="/contact" label="Contact" />
           <div className="pt-2">

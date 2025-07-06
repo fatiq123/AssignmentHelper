@@ -13,14 +13,15 @@ const ContactPage = () => {
     {
       icon: <Mail size={24} />,
       title: "Email",
-      details: "hello@assignmenthelper.com",
+      details: "fatiqhussnain1@gmail.com",
       description: "For general inquiries and support"
     },
     {
       icon: <Phone size={24} />,
       title: "WhatsApp",
-      details: "+1 (555) 123-4567",
-      description: "For quick responses and file sharing"
+      details: "03229549909",
+      description: "For quick responses and file sharing",
+      link: "https://wa.me/923229549909"
     },
     {
       icon: <MessageSquare size={24} />,
@@ -101,7 +102,13 @@ const ContactPage = () => {
                     </div>
                     <div>
                       <h3 className="text-lg font-semibold">{method.title}</h3>
-                      <p className="text-gray-600 mb-1">{method.details}</p>
+                      {method.link ? (
+                        <a href={method.link} target="_blank" rel="noopener noreferrer" className="text-gray-600 mb-1 hover:text-primary transition-colors">
+                          {method.details}
+                        </a>
+                      ) : (
+                        <p className="text-gray-600 mb-1">{method.details}</p>
+                      )}
                       <p className="text-sm text-gray-500">{method.description}</p>
                     </div>
                   </div>

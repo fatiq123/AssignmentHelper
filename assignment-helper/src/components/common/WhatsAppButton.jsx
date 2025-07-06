@@ -9,7 +9,7 @@ const WhatsAppButton = () => {
       transition={{ delay: 1, type: 'spring', stiffness: 260, damping: 20 }}
     >
       <a 
-        href="https://wa.me/15551234567" 
+        href="https://wa.me/+923229549909" 
         target="_blank" 
         rel="noopener noreferrer"
         className="flex items-center justify-center w-14 h-14 bg-gradient-to-r from-green-500 to-green-600 text-white rounded-full shadow-lg hover:shadow-xl transform hover:scale-110 transition duration-300"
