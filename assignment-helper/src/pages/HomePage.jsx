@@ -6,6 +6,7 @@ import HowItWorks from '../components/home/HowItWorks';
 import Statistics from '../components/home/Statistics';
 import Testimonials from '../components/home/Testimonials';
 import ContactSection from '../components/home/ContactSection';
+import TrustIndicators from '../components/common/TrustIndicators';
 
 const HomePage = () => {
   const location = useLocation();
@@ -28,6 +29,7 @@ const HomePage = () => {
       <Services />
       <HowItWorks />
       <Statistics />
+      <TrustIndicators />
       <Testimonials />
       <ContactSection />
     </>

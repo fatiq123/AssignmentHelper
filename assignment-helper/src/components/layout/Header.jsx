@@ -54,6 +54,8 @@ const Header = () => {
               <NavLink to="/institutions" label="Institutions" />
               <NavLink to="/colleges" label="Colleges" />
               <NavLink to="/technologies" label="Technologies" />
+              <NavLink to="/loyalty-program" label="Rewards" />
+              <NavLink to="/faq" label="FAQ" />
               <NavLink to="/about" label="About" />
               <NavLink to="/contact" label="Contact" />
             </div>
@@ -92,6 +94,8 @@ const Header = () => {
           <MobileNavLink to="/institutions" label="Institutions" />
           <MobileNavLink to="/colleges" label="Colleges" />
           <MobileNavLink to="/technologies" label="Technologies" />
+          <MobileNavLink to="/loyalty-program" label="Rewards" />
+          <MobileNavLink to="/faq" label="FAQ" />
           <MobileNavLink to="/about" label="About" />
           <MobileNavLink to="/contact" label="Contact" />
           <div className="pt-2">

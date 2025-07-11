@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import SectionTitle from '../components/common/SectionTitle';
 
@@ -15,6 +16,12 @@ import southernCrossEdu from '../assets/southern_cross_education_institute.jpeg'
 import southernCrossBusiness from '../assets/southern_cross_school_of_business.png';
 import waratahPolytechnic from '../assets/waratah_polytechnic.png';
 import yesCollege from '../assets/yes_college.png';
+// import harvardLogo from '../assets/harvard.png';
+// import mitLogo from '../assets/mit.png';
+// import stanfordLogo from '../assets/stanford.png';
+import harvardLogo from '../assets/yes_college.png';
+import mitLogo from '../assets/yes_college.png';
+import stanfordLogo from '../assets/yes_college.png';
 
 const CollegesPage = () => {
   useEffect(() => {
@@ -24,72 +31,105 @@ const CollegesPage = () => {
   // College data with images
   const colleges = [
     { 
+      id: "harvard-university",
+      name: "Harvard University", 
+      image: harvardLogo,
+      location: "Cambridge, Massachusetts, USA",
+      programs: "Arts & Sciences, Business, Law, Medicine"
+    },
+    { 
+      id: "mit",
+      name: "Massachusetts Institute of Technology", 
+      image: mitLogo,
+      location: "Cambridge, Massachusetts, USA",
+      programs: "Engineering, Computer Science, Business"
+    },
+    { 
+      id: "stanford-university",
+      name: "Stanford University", 
+      image: stanfordLogo,
+      location: "Stanford, California, USA",
+      programs: "Engineering, Business, Medicine, Law"
+    },
+    { 
+      id: "aibt-australia",
       name: "AIBT Australia", 
       image: aibtAustralia,
       location: "Brisbane, Australia",
       programs: "Business, IT, Hospitality"
     },
     { 
+      id: "astral-skills",
       name: "Astral Skills Institute of Australia", 
       image: astralSkills,
       location: "Sydney, Australia",
       programs: "Vocational Training, Skills Development"
     },
     { 
+      id: "campbell-institute",
       name: "Campbell Institute", 
       image: campbellInstitute,
       location: "Wellington, New Zealand",
       programs: "English Language, Academic Preparation"
     },
     { 
+      id: "cim-australia",
       name: "CIM Australia", 
       image: cimAustralia,
       location: "Melbourne, Australia",
       programs: "Marketing, Business Management"
     },
     { 
+      id: "crown-institute",
       name: "Crown Institute", 
       image: crownInstitute,
       location: "Auckland, New Zealand",
       programs: "Business, Tourism, Hospitality"
     },
     { 
+      id: "imperial-institute",
       name: "Imperial Institute of Sydney", 
       image: imperialInstitute,
       location: "Sydney, Australia",
       programs: "Business, IT, Health Services"
     },
     { 
+      id: "kings-own-institute",
       name: "Kings Own Institute", 
       image: kingsOwnInstitute,
       location: "Sydney, Australia",
       programs: "Business, Accounting, IT"
     },
     { 
+      id: "reach-community",
       name: "Reach Community College", 
       image: reachCommunity,
       location: "Melbourne, Australia",
       programs: "Community Services, Education Support"
     },
     { 
+      id: "southern-cross-edu",
       name: "Southern Cross Education Institute", 
       image: southernCrossEdu,
       location: "Melbourne & Adelaide, Australia",
       programs: "Healthcare, Community Services"
     },
     { 
+      id: "southern-cross-business",
       name: "Southern Cross School of Business", 
       image: southernCrossBusiness,
       location: "Sydney, Australia",
       programs: "Business, Management, Finance"
     },
     { 
+      id: "waratah-polytechnic",
       name: "Waratah Polytechnic", 
       image: waratahPolytechnic,
       location: "Sydney, Australia",
       programs: "Technical Training, Engineering"
     },
     { 
+      id: "yes-college",
       name: "Yes College", 
       image: yesCollege,
       location: "Sydney, Australia",
@@ -127,6 +167,7 @@ const CollegesPage = () => {
           <div className="mt-12">
             <div className="flex flex-wrap gap-4 mb-8 justify-center">
               <button className="px-4 py-2 bg-primary text-white rounded-full">All Institutions</button>
+              <button className="px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-full">USA</button>
               <button className="px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-full">Australia</button>
               <button className="px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-full">New Zealand</button>
             </div>
@@ -135,45 +176,55 @@ const CollegesPage = () => {
               {colleges.map((college, index) => (
                 <motion.div 
                   key={index}
-                  className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow"
+                  className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow cursor-pointer"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
+                  onClick={() => {
+                    // For colleges with detail pages, use the Link component
+                    if (["harvard-university", "mit", "stanford-university"].includes(college.id)) {
+                      // Let the Link handle navigation
+                    } else {
+                      alert("Detailed information for this college coming soon!");
+                    }
+                  }}
                 >
-                  <div className="h-48 overflow-hidden bg-gray-100 flex items-center justify-center">
-                    <img 
-                      src={college.image} 
-                      alt={college.name}
-                      className="w-full h-full object-fill transform hover:scale-105 transition-transform duration-500 p-2"
-                    />
-                  </div>
-                  <div className="p-6">
-                    <h3 className="text-xl font-semibold mb-2">{college.name}</h3>
-                    <div className="flex flex-col gap-1 text-gray-600 text-sm">
-                      <div className="flex items-center gap-2">
-                        <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                        </svg>
-                        <span>{college.location}</span>
+                  <Link to={["harvard-university", "mit", "stanford-university"].includes(college.id) ? `/colleges/${college.id}` : "#"}>
+                    <div className="h-48 overflow-hidden bg-gray-100 flex items-center justify-center">
+                      <img 
+                        src={college.image} 
+                        alt={college.name}
+                        className="w-full h-full object-fill transform hover:scale-105 transition-transform duration-500 p-2"
+                      />
+                    </div>
+                    <div className="p-6">
+                      <h3 className="text-xl font-semibold mb-2">{college.name}</h3>
+                      <div className="flex flex-col gap-1 text-gray-600 text-sm">
+                        <div className="flex items-center gap-2">
+                          <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                          </svg>
+                          <span>{college.location}</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                          </svg>
+                          <span>{college.programs}</span>
+                        </div>
                       </div>
-                      <div className="flex items-center gap-2">
-                        <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                        </svg>
-                        <span>{college.programs}</span>
+                      <div className="mt-4">
+                        <span className="text-primary hover:text-accent font-medium flex items-center">
+                          {["harvard-university", "mit", "stanford-university"].includes(college.id) ? "View College Details" : "Coming Soon"}
+                          <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                          </svg>
+                        </span>
                       </div>
                     </div>
-                    <div className="mt-4">
-                      <a href="#" className="text-primary hover:text-accent font-medium flex items-center">
-                        View Assignments
-                        <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                        </svg>
-                      </a>
-                    </div>
-                  </div>
+                  </Link>
                 </motion.div>
               ))}
             </div>
